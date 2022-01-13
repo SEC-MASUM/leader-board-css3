@@ -65,6 +65,9 @@ nav {
   width: 40px;
   height: 51px;
 }
+.navbar #small-display {
+  display: none;
+}
 .navbar .right {
   display: flex;
   align-items: center;
@@ -72,6 +75,9 @@ nav {
 .navbar .right a {
   font-size: var(--regular-font);
   margin-left: 36px;
+}
+.right-nav-container {
+  display: none;
 }
 
 /* ------------------
@@ -252,6 +258,19 @@ hr {
 /* responsive style  */
 /* Mobile Device */
 @media only screen and (max-width: 688px) {
+  .navbar {
+    width: 90%;
+  }
+  .navbar #big-display {
+    display: none;
+  }
+  .navbar #small-display {
+    display: flex;
+  }
+  .navbar #small-display a:last-child {
+    font-size: 35px;
+    margin-left: 16px;
+  }
   section {
     width: 100%;
   }
@@ -302,12 +321,16 @@ hr {
     height: 70%;
   }
   .footer-container {
+    width: 100%;
     font-size: 0.8em;
   }
 }
 
 /* tablet device */
 @media only screen and (min-width: 689px) and (max-width: 992px) {
+  .navbar {
+    width: 90%;
+  }
   section {
     width: 100%;
   }
